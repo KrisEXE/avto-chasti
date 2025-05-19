@@ -75,6 +75,10 @@
                 <li><a href="brands.html" class="block px-4 py-3 text-secondary font-medium">Марки</a></li>
                 <li><a href="about.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">За нас</a></li>
                 <li><a href="contact.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Контакти</a></li>
+                <li><a href="cart.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">
+                    <i class="fas fa-shopping-cart"></i>
+                    Количка
+                </a></li>
             </ul>
         </div>
     </nav>
@@ -280,5 +284,26 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Add click handlers to all buy buttons
+        document.querySelectorAll('.bg-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                // Get product details from parent card
+                const card = this.closest('.bg-white');
+                const name = card.querySelector('h3').textContent;
+                const number = card.querySelector('p:nth-child(2)').textContent.split(': ')[1];
+                const price = parseFloat(card.querySelector('.text-xl').textContent.split(' ')[0]);
+                
+                // Add to cart
+                addToCart({
+                    id: number,
+                    name: name,
+                    number: number, 
+                    price: price
+                });
+            });
+        });
+    </script>
 </body>
 </html>
