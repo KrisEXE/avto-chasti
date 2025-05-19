@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За нас - АвтоЧасти</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#082f49',
+                        secondary: '#dc2626',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        'sans': ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>+359 888 123 456</span>
+                </span>
+                <span class="hidden md:flex items-center">
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>Пон-Пет: 9:00 - 18:00</span>
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-accent"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                <a href="index.html" class="text-3xl font-bold text-primary">
+                    <span class="text-secondary">Авто</span>Части
+                </a>
+                <div class="flex-1 max-w-2xl px-4">
+                    <div class="relative">
+                     
+                             
+                     
+                         
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-100 border-b">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center space-x-1 md:space-x-4">
+                <li><a href="index.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Начало</a></li>
+                <li><a href="catalog.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Каталог</a></li>
+                <li><a href="brands.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Марки</a></li>
+                <li><a href="about.html" class="block px-4 py-3 text-secondary font-medium">За нас</a></li>
+                <li><a href="contact.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-primary">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/3807386/pexels-photo-3807386.jpeg" 
+                 alt="Auto Parts Store" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="relative z-10 container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">За АвтоЧасти</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Вашият надежден партньор в света на автомобилните части от 2010 година
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6">Нашата история</h2>
+                    <p class="text-gray-600 mb-4">
+                        От създаването си през 2010 година, АвтоЧасти се утвърди като един от водещите доставчици на качествени авточасти в България. Започнахме като малък семеен бизнес с една локация в София, а днес обслужваме клиенти в цялата страна.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Нашата мисия е да предоставяме висококачествени авточасти на достъпни цени, съчетано с експертна консултация и отлично обслужване. Работим директно с водещите производители в бранша, което ни позволява да гарантираме качеството на всеки продукт.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-secondary mb-2">14+</div>
+                            <div class="text-gray-600">Години опит</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-secondary mb-2">50k+</div>
+                            <div class="text-gray-600">Доволни клиенти</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg" 
+                         alt="Our Workshop" 
+                         class="rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+                        <div class="text-4xl font-bold text-secondary mb-2">100%</div>
+                        <div class="text-gray-600">Гаранция за качество</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12">Защо да изберете нас?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Quality -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Гарантирано качество</h3>
+                    <p class="text-gray-600">
+                        Работим само с доказани производители и предлагаме 24-месечна гаранция на всички части.
+                    </p>
+                </div>
+
+                <!-- Expertise -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Експертна консултация</h3>
+                    <p class="text-gray-600">
+                        Нашият екип от професионалисти ще ви помогне да намерите точните части за вашия автомобил.
+                    </p>
+                </div>
+
+                <!-- Fast Delivery -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Бърза доставка</h3>
+                    <p class="text-gray-600">
+                        Доставяме до всяка точка в България в рамките на 24 часа.
+                    </p>
+                </div>
+
+                <!-- Wide Selection -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Богат асортимент</h3>
+                    <p class="text-gray-600">
+                        Разполагаме с над 50,000 артикула за всички популярни марки автомобили.
+                    </p>
+                </div>
+
+                <!-- Support -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">24/7 Поддръжка</h3>
+                    <p class="text-gray-600">
+                        Нашият екип е на разположение по всяко време за вашите въпроси.
+                    </p>
+                </div>
+
+                <!-- Best Price -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Най-добри цени</h3>
+                    <p class="text-gray-600">
+                        Предлагаме конкурентни цени и специални оферти за редовни клиенти.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12">Нашият екип</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                         alt="Team Member" 
+                         class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-primary">Георги Иванов</h3>
+                    <p class="text-gray-600">Управител</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="text-center">
+                    <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" 
+                         alt="Team Member" 
+                         class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-primary">Мария Петрова</h3>
+                    <p class="text-gray-600">Търговски директор</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="text-center">
+                    <img src="https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg" 
+                         alt="Team Member" 
+                         class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-primary">Димитър Колев</h3>
+                    <p class="text-gray-600">Технически консултант</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="text-center">
+                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" 
+                         alt="Team Member" 
+                         class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-primary">Елена Димитрова</h3>
+                    <p class="text-gray-600">Обслужване на клиенти</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Готови ли сте да започнем?</h2>
+            <p class="text-xl mb-8">Свържете се с нас за професионална консултация</p>
+            <a href="contact.html" 
+               class="inline-block bg-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                Свържете се с нас
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">За АвтоЧасти</h3>
+                    <p class="text-gray-400">
+                        Вашият надежден партньор за качествени авточасти на достъпни цени. Работим с най-добрите производители в бранша.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакти</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            ул. "Примерна" 123, София
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +359 888 123 456
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@avto-chasti.bg
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Работно време</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Понеделник - Петък: 9:00 - 18:00</li>
+                        <li>Събота: 9:00 - 14:00</li>
+                        <li>Неделя: Затворено</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Следвайте ни</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
+                <p>&copy; 2024 АвтоЧасти. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
