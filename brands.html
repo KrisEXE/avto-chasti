@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марки - АвтоЧасти</title>
+    <link rel="icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/car.svg">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#082f49',
+                        secondary: '#dc2626',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        'sans': ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>+359 888 123 456</span>
+                </span>
+                <span class="hidden md:flex items-center">
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>Пон-Пет: 9:00 - 18:00</span>
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-accent"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                <a href="index.html" class="text-3xl font-bold text-primary">
+                    <span class="text-secondary">Авто</span>Части
+                </a>
+                <div class="flex-1 max-w-2xl px-4">
+                  
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-100 border-b">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center items-center space-x-1 md:space-x-4">
+                <li><a href="index.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Начало</a></li>
+                <li><a href="catalog.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Каталог</a></li>
+                <li><a href="brands.html" class="block px-4 py-3 text-secondary font-medium">Марки</a></li>
+                <li><a href="about.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">За нас</a></li>
+                <li><a href="contact.html" class="block px-4 py-3 text-primary hover:text-secondary font-medium">Контакти</a></li>
+                <li class="relative">
+                    <a href="auto-parts-cart.html" class="block px-4 py-3 text-primary hover:text-secondary">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-secondary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-primary">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg" 
+                 alt="Car Parts" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="relative z-10 container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Марки автомобили</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Разгледайте нашата селекция от части за всички популярни марки автомобили
+            </p>
+        </div>
+    </section>
+
+    <!-- Car Brands Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12">Автомобилни марки</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- BMW -->
+                <a href="bmw-parts.html" class="block">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" 
+                             alt="BMW" 
+                             class="h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-center text-primary">BMW</h3>
+                        <p class="text-center text-gray-600 mt-2">Всички серии</p>
+                        <div class="text-center text-secondary hover:text-red-700 mt-4">
+                            Разгледай части →
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Mercedes -->
+                <a href="mercedes-parts.html" class="block">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" 
+                             alt="Mercedes" 
+                             class="h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-center text-primary">Mercedes-Benz</h3>
+                        <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                        <div class="text-center text-secondary hover:text-red-700 mt-4">
+                            Разгледай части →
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Audi -->
+                <a href="audi-parts.html" class="block">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg" 
+                        alt="Audi" 
+                        class="h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-center text-primary">Audi</h3>
+                        <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                        <div class="text-center text-secondary hover:text-red-700 mt-4">
+                            Разгледай части →
+                        </div>
+                    </div>
+                </a>
+
+                <!-- VW -->
+                <a href="vw-parts.html" class="block">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg"
+                        alt="Volkswagen" 
+                        class="h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-center text-primary">Volkswagen</h3>
+                        <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                        <div class="text-center text-secondary hover:text-red-700 mt-4">
+                            Разгледай части →
+                        </div>
+                    </div>
+                </a>
+                <!-- Opel -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Opel_Logo_2017.svg" 
+                         alt="Opel" 
+                         class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-center text-primary">Opel</h3>
+                    <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                    <a href="#" class="block text-center text-secondary hover:text-red-700 mt-4">
+                        Очаквайте скоро →
+                    </a>
+                </div>
+
+                <!-- Renault -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Renault_2009_logo.svg" 
+                         alt="Renault" 
+                         class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-center text-primary">Renault</h3>
+                    <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                    <a href="#" class="block text-center text-secondary hover:text-red-700 mt-4">
+                        Очаквайте скоро →
+                    </a>
+                </div>
+
+                <!-- Toyota -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg" 
+                         alt="Toyota" 
+                         class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-center text-primary">Toyota</h3>
+                    <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                    <a href="#" class="block text-center text-secondary hover:text-red-700 mt-4">
+                        Очаквайте скоро →
+                    </a>
+                </div>
+
+                <!-- Ford -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg" 
+                         alt="Ford" 
+                         class="h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-center text-primary">Ford</h3>
+                    <p class="text-center text-gray-600 mt-2">Всички модели</p>
+                    <a href="#" class="block text-center text-secondary hover:text-red-700 mt-4">
+                        Очаквайте скоро →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parts Manufacturers -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12">Производители на части</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Bosch -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <img src="https://i0.wp.com/bctechnologies.co.in/wp-content/uploads/2020/07/bosch-logo-big.png?resize=870%2C324&ssl=1" 
+                         alt="Bosch" 
+                         class="h-12 mx-auto">
+                </div>
+
+                <!-- Valeo -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAArlBMVEX///+C5gBOa3x65QB+5QB45AC88Yze+MbB8pRGZXc9X3JJZ3lIZ3hCYnXI86H5/vP8/vfi+c3Q9a6o7Wbp+tdkfYut7nDV9rak7Fza97+d60/3+PmXpq96jppYc4Px/OT1/euv7nSU6Tnr+9vE8prN9KmY6kO88ZC8xcvX3eCvusHt8PGJmqW58IeP6Cyg61RvhZKfrLWPn6mX6j2073zN1Ni0vsXS2Nzh5ejEzNFNh4RGAAAIhklEQVR4nO2aiXLiOBCGwUcAE8DcR7hCICHcEJKQ93+xlXzgbtnAwNg7Ser/arcq2LLcv9TqbsmTSgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPx2Msu7gGWF3SuSW/vS2W6ypJOnJO29nqJpBJhVesvW9eMdfXW+GyNoataStPd6Jno6wGjQW2VySy+e7aVEmprDJO29nvZphUuDKBye7aVmkqZJmnsDZxTSG50reknS3BsoM4V0HQ6okzbP91IM2hrrRO29nhpT2CJ3iNVpwz7fC3FoY5+ovdczMKlCOv4dYvXjhV5aQVt9nKS5N1Bic/gcfeNiAlgRhRcc+n/HTlOFb8GNCllaF5IhC0p6OUlzb4EpJFLWZFrOJ8NUakiD0jBJa29hZEQqpE5qkIptWGtXJkWXSqXZbLfFzSfq6jQoDdrjfbXVaVX3k2hHt8uTZbW1Xrcay0ntQji7FRJQ0iSXUSf1s+RgvE7rKmaZp8NgkAZ3K/1Y+Ol6ej9Q393sGEFlKP5qtZNQ2IhWSIR7cab5ZuqsbeCVpPQ71galhtra0HkiqaRDLcxVAkVtlr7F8K+WgiTiuu7TyIyQ53nlMpxYMpGjMQoc0e6Y4QZCYzZ2hbz09i0g6V6XW6pKlMFH/dVQOqxEmS9aj44CVyc6NC+FtavJUIXHQEjfL36+RBuc9rzyTU2HmVPt9WXECxSJcTvqEzVG94IBCY7GUm4imSjm19IraQ8yHZZofJbRhtx3x/BR5y1oj8+nTL0Rmyn09udkYQmTyqyJsXqmP8dyq0xmQCqgXvs4sIdLnbVXdlvV2qBJB82M+5CAdq5n1Gtyu5EmP42KHfLKJ2V3SGpdL9MEAdtdic+kR6cWpmsl9sqWpnyvqGwG7xOrYkx9aCjv0zGpKUtZ3H5kHqAIkMGMTaG77EgPbIcTB49U4cS5FCRDWamSl5tOSmZF+SCUDkmp62dHskeTmskr/TJqHb4UG1m66J1sRPa+QlK4BFe98oWnw4y66tg+Wy51Goi84MoKj5gV0pLL3b4GcUZKoovOnWLVK0lgkUNEw5S30ZgwhXTXrXuF2mOCCmnZ7B5jEHMmfN/gJpOiUqSNeOAhP4199kWQJZFF9EFPD/zAWU1QoU19RuYiWuWwEtx/tVqkkQZy0lhy8yAthkyNX0W1ElTIywv2Wy4jskD8IKd4Jc3vYoYGJ+sf9wn+Qj+qPEdciw06pCJw0PxuM3MMrypWvJIeyomtJDu9CwtcRR9Trsi10UlTb2TMg38Qt/Usr1f8IxhioSwRlMBTOa+wkRqSIfS3IvQwJf7zSFZP1IiT6baSGdzIqHglSyfP/BQyjF5k+d53C3ak0Dhj7E3QMdXbezaFTL7phlLmlWIQ7ogfN9QNp4pZ5t9D3PzDq5z4t4jUoj23nvmc6Z7XqOmQxqIX/rljNc4q3NncZ7x02I5YDDGyptE7eNGdvEcXqffNRfFKGgbllOyJ4MjPHUyNVxJkw1k3Tl6oXwUvcjJVlgdaCfVKWSHQZ8pMYXRmo27hb9do0WZEPfR3tKNig7caqHrPS5V0mCJLSK7UO/pE1FavElHSkBfHvrVI8QPd4EV2SKG30VG8kmZ4Oe/si07Ufp3H7pAFeiXimb8lQqC/K2D2OlVrmbYqK9/nFAEieweH/Hat6OQBWlJ4UYU57vl/MXAb1YiF6N1qUnv11qTYoRfMcDrkxyJpQ0+3liKG7lsrQzcdhSz3uRl/xBNO/IST9PFTBa/BDJ2fKpo2i0XuJK+V8ZLn2W717fX6pnp+Npx0Y6YWLpb9W/bZCkVNh06CKZ8svb3cwAZUry7fqI8m9IFV9VIzSLrPkanEUzTiDbwgUT01Kv4/02Bdsr2VkdS/AuCfZ9hJSfPMZsjxSrIr8I/qTh73en22T/VpGIn4aEqpJcVYZ8i9kaJeOWShG2g/f6fWkR85gk1D9sShvxHPUel2HrqkxBOWxUppqknfk8LbSYeRHxqbq7BGw1weO436DmKY65gSxcFaHJRLtsk+CfKRtKum7n8DvBuKsBQ0bMtPFMGDtN7KPDrfGt3nJOnOkrjgsMHDskglo0wqLg6W1VM0ljOE0Jf4YbHRee5Ux86NIWlZ4j+VB4flStE5iCpWMk9DtdNSpbrS3eExhfxxrGf571be2j3E2eONlAZyaMtP8ZcxH5aWy01j7/Y7sStomrUJh5xfxOZe0+5zX//ajAR5yGsCq/v3Hc3nh9fP9+l0Nttuu93FotfbbDZ1h76D+7e42OstFt3udrudzaZf75+vh/n8IcFo8GpJiYXe9U/OD59f09l219vU+1q+YAkKgpzk/v4+n5f/OeQd/D/F/04b2djyKeS0fn3TW3S3H9N3oTlOxbOClJjr/1mfD0LWbLvY9D1FwlJps3YeV5OvqFDI5zU5p858SnYLipz9WYwKUxvHvvvzEuevX7Ndr64V5HDnxDRc0ORMlFQkBkETk7PrbmcfjkuK+UnSJyONL7jjHCnx4fD+0e31PWEXZGn3966sXL/e221nsfvbrUwt17w6u/pwmG57/ZychD9RJoQV8vVedzb9PHy/7OP6qZbbuD8fDl9Cm5y1P3DGnJgyrb7YTt8P32G2TjB3J1ErdFOHj109J7VdmjYprSCkzb6+s7Ij25xrdk6Ku+ST0iWt/Kb78fn9vPE0F6csmLicmLcfpc3lo/AH6iyrv/t4/Qk+GcV5dWLq+r3ZjxXncHIS5aLrd79+nluGODV39e77L1AnmeXUyStY2u43zJ3Pg8XCSsHazNRzqp/O4pgxcpa2+PrRUSUad6Mo5XVf/7UtCdH/3fIEW6uw+8XyBPPffB4FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4/AdRvJe87wUcqAAAAABJRU5ErkJggg==" 
+                         alt="Valeo" 
+                         class="h-12 mx-auto">
+                </div>
+
+                <!-- Continental -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <img src="data:image/png;base64,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" 
+                         alt="Continental" 
+                         class="h-12 mx-auto">
+                </div>
+
+                <!-- Brembo -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <img src="data:image/png;base64,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" 
+                         alt="Brembo" 
+                         class="h-12 mx-auto">
+                </div>
+
+                <!-- Mann Filter -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <img src="data:image/png;base64,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" 
+                         alt="Mann Filter" 
+                         class="h-12 mx-auto">
+                </div>
+
+                <!-- ZF -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <img src="data:image/png;base64,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" 
+                         alt="ZF" 
+                         class="h-12 mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Не намирате вашата марка?</h2>
+            <p class="text-xl mb-8">Свържете се с нас и ще ви помогнем да намерите точните части за вашия автомобил</p>
+            <a href="contact.html" 
+               class="inline-block bg-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                Свържете се с нас
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">За АвтоЧасти</h3>
+                    <p class="text-gray-400">
+                        Вашият надежден партньор за качествени авточасти на достъпни цени. Работим с най-добрите производители в бранша.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакти</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            ул. "Примерна" 123, София
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +359 888 123 456
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@avto-chasti.bg
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Работно време</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Понеделник - Петък: 9:00 - 18:00</li>
+                        <li>Събота: 9:00 - 14:00</li>
+                        <li>Неделя: Затворено</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Следвайте ни</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
+                <p>&copy; 2024 АвтоЧасти. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cart functionality
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('auto-parts-cart')) || [];
+            document.getElementById('cartCount').textContent = cart.length;
+        }
+
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('auto-parts-cart')) || [];
+            cart.push(product);
+            localStorage.setItem('auto-parts-cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        // Initialize cart count
+        updateCartCount();
+    });
+    </script>
+</body>
+</html>
