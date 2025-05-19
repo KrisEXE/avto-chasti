@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi Части - АвтоЧасти</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#082f49',
+                        secondary: '#dc2626',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+359888123456" class="flex items-center text-sm">
+                        <i class="fas fa-phone mr-2"></i>
+                        +359 888 123 456
+                    </a>
+                    <span class="text-sm">
+                        <i class="far fa-clock mr-2"></i>
+                        Пон-Пет: 9:00 - 18:00
+                    </span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-white hover:text-accent">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-accent">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-3xl font-bold text-primary">
+                    <a href="index.html">
+                        <span class="text-secondary">Авто</span>Части
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary">Начало</a>
+                    <a href="catalog.html" class="text-gray-600 hover:text-primary">Каталог</a>
+                    <a href="brands.html" class="text-gray-600 hover:text-primary">Марки</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary">За нас</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Контакти</a>
+                    <a href="cart.html" class="text-primary hover:text-secondary relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartCount" class="absolute -top-2 -right-2 bg-secondary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-primary mb-8">Части за Audi</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Маслен филтър Audi -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <img src="data:image/jpeg;base64,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" 
+                     alt="Маслен филтър Audi" 
+                     class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Маслен филтър Audi</h3>
+                    <p class="text-gray-600 text-sm mb-2">Номер: 06L115562</p>
+                    <p class="text-gray-600 text-sm mb-4">Приложение: Audi A4, A6, Q5</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-primary">49.99 лв.</span>
+                        <button onclick="cart.addItem({
+                            id: 'audi-oil-filter',
+                            name: 'Маслен филтър Audi',
+                            number: '06L115562',
+                            price: 49.99
+                        })" class="bg-secondary text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">
+                            Купи
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Спирачни дискове Audi -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <img src="data:image/jpeg;base64,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" 
+                     alt="Спирачни дискове Audi" 
+                     class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Спирачни дискове Audi</h3>
+                    <p class="text-gray-600 text-sm mb-2">Номер: 8K0615301A</p>
+                    <p class="text-gray-600 text-sm mb-4">Приложение: Audi A4, A5</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-primary">219.99 лв.</span>
+                        <button onclick="cart.addItem({
+                            id: 'audi-brake-discs',
+                            name: 'Спирачни дискове Audi',
+                            number: '8K0615301A',
+                            price: 219.99
+                        })" class="bg-secondary text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">
+                            Купи
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Въздушен филтър Audi -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <img src="data:image/jpeg;base64,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" 
+                     alt="Въздушен филтър Audi" 
+                     class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Въздушен филтър Audi</h3>
+                    <p class="text-gray-600 text-sm mb-2">Номер: 8K0133843C</p>
+                    <p class="text-gray-600 text-sm mb-4">Приложение: Audi A4, A5, Q5</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-primary">65.99 лв.</span>
+                        <button onclick="cart.addItem({
+                            id: 'audi-air-filter',
+                            name: 'Въздушен филтър Audi',
+                            number: '8K0133843C',
+                            price: 65.99
+                        })" class="bg-secondary text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">
+                            Купи
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Амортисьори Audi -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <img src="data:image/jpeg;base64,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" 
+                     alt="Амортисьори Audi" 
+                     class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Амортисьори Audi</h3>
+                    <p class="text-gray-600 text-sm mb-2">Номер: 8K0413031BH</p>
+                    <p class="text-gray-600 text-sm mb-4">Приложение: Audi A4, A5</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-primary">299.99 лв.</span>
+                        <button onclick="cart.addItem({
+                            id: 'audi-shock-absorbers',
+                            name: 'Амортисьори Audi',
+                            number: '8K0413031BH',
+                            price: 299.99
+                        })" class="bg-secondary text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">
+                            Купи
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакти</h3>
+                    <p class="mb-2">
+                        <i class="fas fa-phone mr-2"></i>
+                        +359 888 123 456
+                    </p>
+                    <p class="mb-2">
+                        <i class="far fa-clock mr-2"></i>
+                        Пон-Пет: 9:00 - 18:00
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Полезни връзки</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-accent">За нас</a></li>
+                        <li><a href="contact.html" class="hover:text-accent">Контакти</a></li>
+                        <li><a href="brands.html" class="hover:text-accent">Марки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Следвайте ни</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+                <p>© 2024 АвтоЧасти. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
