@@ -1,7 +1,10 @@
-// Cart functionality
+    // Cart functionality
 document.addEventListener('DOMContentLoaded', function() {
     updateCartDisplay();
-    document.getElementById('checkoutForm').addEventListener('submit', handleCheckout);
+    const checkoutForm = document.getElementById('checkoutForm');
+    if (checkoutForm) {
+        checkoutForm.addEventListener('submit', handleCheckout);
+    }
 });
 
 // Get cart items from localStorage
@@ -11,18 +14,17 @@ let cartItems = JSON.parse(localStorage.getItem('autoPartsCart')) || [];
 function updateCartDisplay() {
     const cartItemsContainer = document.getElementById('cartItems');
     const emptyCartEl = document.getElementById('emptyCart');
-    const subtotalEl = document.getElementById('subtotal');
-    const shippingEl = document.getElementById('shipping');
-    const totalEl = document.getElementById('total');
+    
+    if (!cartItemsContainer) return;
 
     if (cartItems.length === 0) {
         cartItemsContainer.innerHTML = '';
-        emptyCartEl.classList.remove('hidden');
+        if (emptyCartEl) emptyCartEl.classList.remove('hidden');
         updateSummary(0);
         return;
     }
 
-    emptyCartEl.classList.add('hidden');
+    if (emptyCartEl) emptyCartEl.classList.add('hidden');
     let html = '';
     let subtotal = 0;
 
@@ -64,12 +66,18 @@ function updateCartDisplay() {
 
 // Function to update order summary
 function updateSummary(subtotal) {
+    const subtotalEl = document.getElementById('subtotal');
+    const shippingEl = document.getElementById('shipping');
+    const totalEl = document.getElementById('total');
+    
+    if (!subtotalEl || !shippingEl || !totalEl) return;
+
     const shipping = subtotal >= 100 ? 0 : 10;
     const total = subtotal + shipping;
 
-    document.getElementById('subtotal').textContent = subtotal.toFixed(2) + ' лв.';
-    document.getElementById('shipping').textContent = shipping.toFixed(2) + ' лв.';
-    document.getElementById('total').textContent = total.toFixed(2) + ' лв.';
+    subtotalEl.textContent = subtotal.toFixed(2) + ' лв.';
+    shippingEl.textContent = shipping.toFixed(2) + ' лв.';
+    totalEl.textContent = total.toFixed(2) + ' лв.';
 }
 
 // Function to update cart icon
@@ -77,10 +85,38 @@ function updateCartIcon() {
     const cartCount = document.getElementById('cartCount');
     if (cartCount) {
         const totalItems = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
-        cartCount.textContent = totalItems || '';
-        cartCount.classList.toggle('hidden', totalItems === 0);
+        if (totalItems > 0) {
+            cartCount.textContent = totalItems;
+            cartCount.classList.remove('hidden');
+        } else {
+            cartCount.textContent = '';
+            cartCount.classList.add('hidden');
+        }
     }
 }
+
+// Function to add item to cart
+function addToCart(item) {
+    const existingItem = cartItems.find(i => i.id === item.id);
+    
+    if (existingItem) {
+        existingItem.quantity = (existingItem.quantity || 1) + 1;
+    } else {
+        cartItems.push({
+            ...item,
+            quantity: 1
+        });
+    }
+    
+    localStorage.setItem('autoPartsCart', JSON.stringify(cartItems));
+    updateCartDisplay();
+    showNotification(`${item.name} добавен в количката`);
+}
+
+// Global cart object for product pages to use
+window.cart = {
+    addItem: addToCart
+};
 
 // Function to remove item from cart
 function removeFromCart(index) {
@@ -145,7 +181,7 @@ function showNotification(message, isError = false) {
 function addTestItem() {
     const testItem = {
         id: 'test-' + Date.now(),
-        name: 'Test Auto Part ' + Math.floor(Math.random() * 100),
+        name: 'Тестова авточаст ' + Math.floor(Math.random() * 100),
         number: 'P' + Math.floor(Math.random() * 10000),
         price: Math.floor(Math.random() * 200) + 50,
         quantity: 1
