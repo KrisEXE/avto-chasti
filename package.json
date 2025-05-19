@@ -1,0 +1,11 @@
+{
+  "name": "auto-parts-shop",
+  "version": "1.0.0",
+  "description": "Auto Parts Shop with Cart Functionality",
+  "scripts": {
+    "dev": "http-server -p 8000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
