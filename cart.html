@@ -81,73 +81,70 @@
                 <div id="cartItems" class="space-y-4">
                     <!-- Cart items will be inserted here -->
                 </div>
-                <!-- Test Add Item Button (For Development Only) -->
-                <button onclick="addTestItem()" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">
-                    Add Test Item
-                </button>
-                <div id="emptyCart" class="hidden text-center py-8">
-                    <p class="text-gray-500 text-lg">Вашата количка е празна</p>
-                    <a href="index.html" class="inline-block mt-4 bg-secondary text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300">
+                
+                <div id="emptyCart" class="hidden bg-white rounded-lg shadow-md p-8 text-center">
+                    <button onclick="addTestItem()" class="mb-4 bg-secondary text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">
+                        Добави тестов продукт
+                    </button>
+                    <i class="fas fa-shopping-cart text-4xl text-gray-400 mb-4"></i>
+                    <p class="text-gray-600">Вашата количка е празна</p>
+                    <a href="index.html" class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded hover:bg-blue-900 transition duration-300">
                         Към магазина
                     </a>
                 </div>
             </div>
 
             <!-- Order Summary -->
-            <div class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-xl font-semibold mb-4">Поръчка</h2>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex justify-between">
-                            <span>Междинна сума:</span>
-                            <span id="subtotal">0.00 лв.</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Доставка:</span>
-                            <span id="shipping">0.00 лв.</span>
-                        </div>
-                        <div class="border-t pt-2 mt-2">
-                            <div class="flex justify-between font-semibold">
-                                <span>Общо:</span>
-                                <span id="total">0.00 лв.</span>
-                            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 h-fit">
+                <h2 class="text-xl font-bold mb-4">Обобщение на поръчката</h2>
+                <div class="space-y-2 mb-4">
+                    <div class="flex justify-between">
+                        <span>Междинна сума:</span>
+                        <span id="subtotal">0.00 лв.</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Доставка:</span>
+                        <span id="shipping">0.00 лв.</span>
+                    </div>
+                    <div class="border-t pt-2 mt-2">
+                        <div class="flex justify-between font-bold">
+                            <span>Общо:</span>
+                            <span id="total">0.00 лв.</span>
                         </div>
                     </div>
-
-                    <!-- Checkout Form -->
-                    <form id="checkoutForm" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Име и фамилия</label>
-                            <input type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Телефон</label>
-                            <input type="tel" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Имейл</label>
-                            <input type="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Адрес за доставка</label>
-                            <textarea required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-secondary text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">
-                            Поръчай
-                        </button>
-                    </form>
                 </div>
+
+                <form id="checkoutForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Име</label>
+                        <input type="text" required class="w-full rounded border-gray-300 focus:border-primary focus:ring-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Телефон</label>
+                        <input type="tel" required class="w-full rounded border-gray-300 focus:border-primary focus:ring-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Адрес</label>
+                        <textarea required class="w-full rounded border-gray-300 focus:border-primary focus:ring-primary"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-secondary text-white py-2 rounded hover:bg-red-700 transition duration-300">
+                        Поръчай
+                    </button>
+                </form>
             </div>
         </div>
 
-        <!-- Order Complete Message -->
-        <div id="orderComplete" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
-            <div class="bg-white p-8 rounded-lg max-w-md">
-                <h2 class="text-2xl font-bold text-primary mb-4">Благодарим за поръчката!</h2>
-                <p class="text-gray-600 mb-6">Ще се свържем с вас скоро за потвърждение.</p>
-                <button onclick="window.location.href='index.html'" class="w-full bg-secondary text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">
-                    Продължи пазаруването
-                </button>
+        <!-- Order Complete Modal -->
+        <div id="orderComplete" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg max-w-md w-full mx-4">
+                <div class="text-center">
+                    <i class="fas fa-check-circle text-green-500 text-5xl mb-4"></i>
+                    <h2 class="text-2xl font-bold mb-2">Поръчката е приета!</h2>
+                    <p class="text-gray-600 mb-6">Благодарим Ви за поръчката. Ще се свържем с Вас скоро.</p>
+                    <a href="index.html" class="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-blue-900 transition duration-300">
+                        Към началната страница
+                    </a>
+                </div>
             </div>
         </div>
     </main>
